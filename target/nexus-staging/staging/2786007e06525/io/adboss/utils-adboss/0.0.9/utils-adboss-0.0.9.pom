@@ -1,0 +1,297 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.adboss</groupId>
+  <artifactId>utils-adboss</artifactId>
+  <version>0.0.9</version>
+  <name>utils-adboss</name>
+  
+  <description>A application used as an example on how to set up pushing 
+	  its components to the Central Repository.</description>
+	<url>http://www.adboss.io/example-application</url>
+	
+	<developers>
+	    <developer>
+	      <name>Rafael Oliver</name>
+	      <email>rafa@adboss.io</email>
+	      <organization>Adboss</organization>
+	      <organizationUrl>https://www.adboss.io</organizationUrl>
+	    </developer>
+	  </developers>
+	  
+	  <scm>
+		  <connection>scm:git: git://github.com/adboss/adarga-ionic.git</connection>
+		  <developerConnection>scm:git:ssh://github.com:adboss/adarga-ionic.git</developerConnection>
+		  <url>https://github.com/adboss</url>
+		</scm>
+		
+		<licenses>
+		  <license>
+		    <name>The Apache License, Version 2.0</name>
+		    <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		  </license>
+		</licenses>
+		
+		<properties>
+		    <appengine.maven.plugin.version>1.3.2</appengine.maven.plugin.version>
+		    <appengine.api.sdk.version>1.9.63</appengine.api.sdk.version>
+		    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		    <maven.compiler.source>1.8</maven.compiler.source>
+		    <maven.compiler.target>1.8</maven.compiler.target>
+		    <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>  
+		  </properties>
+  
+    <!-- Google My Business API is not located in a Remote Repository, you just have the jar files. 
+  	   So you have to create a Local Repository. The local repository we are using is called 'local-gmb-repo'
+  	   The original files are in ${project.basedir}/src/main/lib and the local repository is located in
+  	   ${project.basedir}/local-gmb-repo (GMB/local-gmb-repo). 
+  	   Once you have created the local repository, later in the pom.xml you will find the 
+  	   dependency (GroupId: gmb; ArtifactId: gmb-api)
+  	   In order to create the jar files in the local repository you have to get the original jar files from
+  	   Google My Business and put them in the repository with this instruction from Maven at the terminal:
+  	   	mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file  
+  	   		-Dfile=C:\Users\rafae\eclipse-workspace\GMB\src\main\lib\google-api-services-mybusiness-v4-revsnapshot-1.23.0.jar 
+  	   		-DgroupId=gmb 
+  	   		-DartifactId=gmb-api 
+  	   		-Dversion=1.0 
+  	   		-Dpackaging=jar 
+  	   		-DlocalRepositoryPath=local-gmb-repo/
+  	   You don't have to execute this instruction, you just have to assure the local repository is intact
+  -->
+  
+   <repositories>
+    <repository>
+        <id>local-gmb-repo</id>
+        <url>file:///${project.basedir}/local-gmb-repo</url>
+    </repository>
+    
+  </repositories>
+  
+  <dependencies>
+  
+  <!-- This is the dependency from the Local Repository (local-gmb-repo) that is defined above
+  		 The GroupId is 'gmb' and the ArtifactId is 'gmb-api'
+  	-->
+  	<dependency>
+        <groupId>gmb</groupId>
+        <artifactId>gmb-api</artifactId>
+        <version>1.2</version>
+	</dependency>
+	
+	
+  
+  	<dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.google.appengine</groupId>
+      <artifactId>appengine-api-1.0-sdk</artifactId>
+      <version>1.9.63</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20190722</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.google.http-client</groupId>
+	  <artifactId>google-http-client-gson</artifactId>
+	  <version>1.23.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.google.http-client</groupId>
+	  <artifactId>google-http-client-jackson2</artifactId>
+	  <version>1.30.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.google.auth</groupId>
+	  <artifactId>google-auth-library-oauth2-http</artifactId>
+	  <version>0.20.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.google.oauth-client</groupId>
+	  <artifactId>google-oauth-client</artifactId>
+	  <version>1.23.0</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.vdurmont</groupId>
+	  <artifactId>emoji-java</artifactId>
+	  <version>3.1.3</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
+	<dependency>
+	    <groupId>com.google.api-client</groupId>
+	    <artifactId>google-api-client</artifactId>
+	    <version>1.30.9</version>
+	</dependency>
+	
+		<dependency>
+	  <groupId>org.facebook4j</groupId>
+	  <artifactId>facebook4j-core</artifactId>
+	  <version>[2.4,)</version>
+	</dependency>
+	
+	<dependency>
+	   <groupId>org.twitter4j</groupId>
+	   <artifactId>twitter4j-core</artifactId>
+	   <version>[4.0,)</version>
+	</dependency>
+	
+	<dependency>
+      <groupId>com.google.apis</groupId>
+      <artifactId>google-api-services-webmasters</artifactId>
+      <version>v3-rev35-1.25.0</version>
+    </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.19</version>
+	</dependency>
+	
+	<!-- Gestor de mails -->
+	<dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4</version>
+    </dependency>
+    
+    
+    
+  </dependencies>
+  
+  
+  <distributionManagement>
+	  <snapshotRepository>
+	    <id>ossrh</id>
+	    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	  </snapshotRepository>
+	   <repository>
+	    <id>ossrh</id>
+	    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	  </repository>
+	</distributionManagement>
+
+	<build>
+	  <plugins>
+	    <plugin>
+	      <groupId>org.sonatype.plugins</groupId>
+	      <artifactId>nexus-staging-maven-plugin</artifactId>
+	      <version>1.6.7</version>
+	      <extensions>true</extensions>
+	      <configuration>
+	        <serverId>ossrh</serverId>
+	        <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+	        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+	      </configuration>
+    </plugin>
+    
+    <!-- Attach source jars-->
+	  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+	  
+	  <!-- Attach javadocs jar -->
+	   
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+	         <additionalparam>-Xdoclint:none</additionalparam>
+	         <additionalOptions>-Xdoclint:none</additionalOptions>
+	         <additionalJOption>-Xdoclint:none</additionalJOption>
+	      </configuration>
+        <executions>
+	      <execution>
+	        <id>attach-javadocs</id>
+	        <goals>
+	          <goal>jar</goal>
+	        </goals>
+	      </execution>
+	    </executions>
+      </plugin>
+      
+      
+      <!-- GPG Signed Components -->
+      
+      <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-gpg-plugin</artifactId>
+	      <version>1.5</version>
+	      <executions>
+	        <execution>
+	          <id>sign-artifacts</id>
+	          <phase>verify</phase>
+	          <goals>
+	            <goal>sign</goal>
+	          </goals>
+	        </execution>
+	      </executions>
+	    </plugin>
+	    
+	    <plugin>
+		  <groupId>org.sonatype.plugins</groupId>
+		  <artifactId>nexus-staging-maven-plugin</artifactId>
+		  <version>1.6.7</version>
+		  <extensions>true</extensions>
+		  <configuration>
+		     <serverId>ossrh</serverId>
+		     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+		     <autoReleaseAfterClose>true</autoReleaseAfterClose>
+		  </configuration>
+		</plugin>
+		
+		<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+            <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            
+        </configuration>
+        <executions>
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+		
+	
+   
+  </plugins>
+  
+  
+  
+</build>
+  
+</project>

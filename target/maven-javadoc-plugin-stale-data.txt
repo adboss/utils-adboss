@@ -1,0 +1,80 @@
+/usr/lib/jvm/java-8-oracle/jre/../bin/javadoc
+-Xdoclint:none
+@options
+@packages
+-classpath
+'/home/rafa/.m2/repository/gmb/gmb-api/1.2/gmb-api-1.2.jar:/home/rafa/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/rafa/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.63/appengine-api-1.0-sdk-1.9.63.jar:/home/rafa/.m2/repository/org/json/json/20190722/json-20190722.jar:/home/rafa/.m2/repository/com/google/http-client/google-http-client-gson/1.23.0/google-http-client-gson-1.23.0.jar:/home/rafa/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar:/home/rafa/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar:/home/rafa/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar:/home/rafa/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/home/rafa/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar:/home/rafa/.m2/repository/com/google/code/gson/gson/2.1/gson-2.1.jar:/home/rafa/.m2/repository/com/google/http-client/google-http-client-jackson2/1.30.0/google-http-client-jackson2-1.30.0.jar:/home/rafa/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/home/rafa/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.20.0/google-auth-library-oauth2-http-0.20.0.jar:/home/rafa/.m2/repository/com/google/auto/value/auto-value-annotations/1.7/auto-value-annotations-1.7.jar:/home/rafa/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/rafa/.m2/repository/com/google/auth/google-auth-library-credentials/0.20.0/google-auth-library-credentials-0.20.0.jar:/home/rafa/.m2/repository/com/google/guava/guava/28.2-android/guava-28.2-android.jar:/home/rafa/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/rafa/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/rafa/.m2/repository/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar:/home/rafa/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar:/home/rafa/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/home/rafa/.m2/repository/com/google/oauth-client/google-oauth-client/1.23.0/google-oauth-client-1.23.0.jar:/home/rafa/.m2/repository/com/vdurmont/emoji-java/3.1.3/emoji-java-3.1.3.jar:/home/rafa/.m2/repository/com/google/api-client/google-api-client/1.30.9/google-api-client-1.30.9.jar:/home/rafa/.m2/repository/org/facebook4j/facebook4j-core/2.4.13/facebook4j-core-2.4.13.jar:/home/rafa/.m2/repository/org/twitter4j/twitter4j-core/4.0.7/twitter4j-core-4.0.7.jar:/home/rafa/.m2/repository/com/google/apis/google-api-services-webmasters/v3-rev35-1.25.0/google-api-services-webmasters-v3-rev35-1.25.0.jar:/home/rafa/.m2/repository/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar:/home/rafa/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/home/rafa/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar:/home/rafa/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/rafa/eclipse-workspace/utils-adboss/src/main/java'
+-Xdoclint:none
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/rafa/eclipse-workspace/utils-adboss/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'utils-adboss 0.0.9 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/home/rafa/eclipse-workspace/utils-adboss/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'utils-adboss 0.0.9 API'
+io.adboss.dataconnection
+io.adboss.platforms
+io.adboss.testing
+io.adboss.utils
+/home/rafa/.m2/repository/gmb/gmb-api/1.2/gmb-api-1.2.jar = 1587289475000
+/home/rafa/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar = 1587289360000
+/home/rafa/.m2/repository/com/google/appengine/appengine-api-1.0-sdk/1.9.63/appengine-api-1.0-sdk-1.9.63.jar = 1587289458000
+/home/rafa/.m2/repository/org/json/json/20190722/json-20190722.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/http-client/google-http-client-gson/1.23.0/google-http-client-gson-1.23.0.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar = 1587289459000
+/home/rafa/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar = 1587289459000
+/home/rafa/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar = 1587289459000
+/home/rafa/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar = 1587289459000
+/home/rafa/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/code/gson/gson/2.1/gson-2.1.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/http-client/google-http-client-jackson2/1.30.0/google-http-client-jackson2-1.30.0.jar = 1587289459000
+/home/rafa/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.20.0/google-auth-library-oauth2-http-0.20.0.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/auto/value/auto-value-annotations/1.7/auto-value-annotations-1.7.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/auth/google-auth-library-credentials/0.20.0/google-auth-library-credentials-0.20.0.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/guava/guava/28.2-android/guava-28.2-android.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1587289459000
+/home/rafa/.m2/repository/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar = 1587289459000
+/home/rafa/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.4/error_prone_annotations-2.3.4.jar = 1587289460000
+/home/rafa/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar = 1587289460000
+/home/rafa/.m2/repository/com/google/oauth-client/google-oauth-client/1.23.0/google-oauth-client-1.23.0.jar = 1587289460000
+/home/rafa/.m2/repository/com/vdurmont/emoji-java/3.1.3/emoji-java-3.1.3.jar = 1587289460000
+/home/rafa/.m2/repository/com/google/api-client/google-api-client/1.30.9/google-api-client-1.30.9.jar = 1587289460000
+/home/rafa/.m2/repository/org/facebook4j/facebook4j-core/2.4.13/facebook4j-core-2.4.13.jar = 1587289460000
+/home/rafa/.m2/repository/org/twitter4j/twitter4j-core/4.0.7/twitter4j-core-4.0.7.jar = 1587289460000
+/home/rafa/.m2/repository/com/google/apis/google-api-services-webmasters/v3-rev35-1.25.0/google-api-services-webmasters-v3-rev35-1.25.0.jar = 1587289460000
+/home/rafa/.m2/repository/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar = 1587289460000
+/home/rafa/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar = 1587289460000
+/home/rafa/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar = 1587289460000
+/home/rafa/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar = 1587289460000
+/home/rafa/eclipse-workspace/utils-adboss/src/main/java = 1587232541000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-tree.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/index.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/package-list = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/index-all.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/allclasses-frame.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/help-doc.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/constant-values.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/stylesheet.css = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/allclasses-noframe.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/script.js = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/deprecated-list.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-summary.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-frame.html = 1587811097000

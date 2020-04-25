@@ -1,0 +1,1 @@
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=/home/rafa/eclipse-workspace/Testing/utils/utils-adboss-0.0.4.jar -DgroupId=utils -DartifactId=utils-adboss -Dversion=1.2 -Dpackaging=jar -DlocalRepositoryPath=utils/

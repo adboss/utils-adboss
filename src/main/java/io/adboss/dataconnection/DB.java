@@ -90,9 +90,9 @@ public class DB {
 		    	
 				//if (url == null)
 				//	url = "jdbc:mysql://google/MB?cloudSqlInstance=marketboss-201812:europe-west1:marketboss&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=QuiqueRafa&useSSL=false";
-				
+				log.info(url);
 		    	Class.forName("com.mysql.cj.jdbc.Driver");
-		    			    	
+		    	
 		    	conn = DriverManager.getConnection(url); 
 		        return conn;
 		      } catch (SQLException e) {
@@ -626,27 +626,22 @@ public class DB {
 		/**
 		 * Set in the database the id of the facebook page
 		 * It supposes that there is only one facebook page
-		 * @param username
 		 * @return false if there has been an error and it's been imposible to set the facebook
 		 * id page and true if everthing went ok and the facebook page has been set
-		 * @throws SQLException
-		 * @throws IOException 
-		 * @throws ServletException 
-		 * @throws ClassNotFoundException 
 		 */
 		
-		public boolean setFBIdPage(String username, String idPage, String namePage) throws SQLException, ClassNotFoundException, ServletException, IOException {
+		public boolean setFBIdPage(String username, String idPage) throws SQLException, ClassNotFoundException, ServletException, IOException {
 			boolean result = false;
 			String SQL = "SELECT idPage FROM apiadbossDB.fbpages WHERE username = '" + username + "'";
 			
 			ResultSet rs = ExecuteSELECT(SQL);
 			
 			if (rs.next()) {
-				SQL = "UPDATE apiadbossDB.fbpages SET idPage = '" + idPage + "' , namePage = '" + namePage + "' WHERE username = '" + username + "'";
+				SQL = "UPDATE apiadbossDB.fbpages SET idPage = '" + idPage + "' WHERE username = '" + username + "'";
 				
 				Execute(SQL);
 			} else {
-				SQL = "INSERT INTO apiadbossDB.fbpages (username, idPage, namePage) VALUES ('" + username + "', '" + idPage + "', '" + namePage + "')";
+				SQL = "INSERT INTO apiadbossDB.fbpages (username, idPage, namePage) VALUES ('" + username + "', '" + idPage + "')";
 				
 				Execute(SQL);
 			}

@@ -282,10 +282,10 @@ public class qreah {
 	
 	
 	
-	/**
+	/*
 	 * Get the day of the month in String type
 	 * 
-	 * @param date
+	 * @param date date in format Date you want to get the day from
 	 * @return String with the date of the month
 	 */
 	
@@ -318,10 +318,9 @@ public class qreah {
 		return dateS;
 	}
 	
-	/**
+	/*
 	 * Get the month of the date in String type
 	 * 
-	 * @param date
 	 * @return String with the month of the year
 	 */
 	
@@ -332,10 +331,9 @@ public class qreah {
 		return String.valueOf(month);
 	}
 	
-	/**
+	/*
 	 * Get the year of the date in String type
 	 * 
-	 * @param date
 	 * @return String with the year
 	 */
 	
@@ -380,7 +378,7 @@ public class qreah {
 	
 	}
 	
-	/**
+	/*
 	 * I don't know why when you ask Facebook for date 2019-12-06, he will
 	 * give you 2019-12-05. Google Insights has the restriction that has no 
 	 * data for the last date
@@ -399,11 +397,7 @@ public class qreah {
 	
 	}
 	
-	/**
-	 * 	Compares a date string (date) in format "yyyy-mm-dd" with another fate in string
-	 * 	at the same format (dateRef)
-	 * @throws ParseException 
-	 */
+	
 	
 	public boolean isGreater(String date, String dateRef) throws ParseException {
 		
@@ -660,12 +654,7 @@ public class qreah {
 		return dao;
 	}
 	
-	/**
-	 * Translate an ArrayList to JsonArray. Used when you want to send
-	 * the object to the Front End
-	 * @param array: object from Array<String>
-	 * @return JsonArray: [{'id': 'xxxx'}, {'id': 'yyyy'}, {'id': 'zzzz'}}
-	 */
+	
 	
 	public JsonArray toJsonArray(ArrayList<String> array) {
 
@@ -737,11 +726,6 @@ public class qreah {
 		}
 	}
 	
-	/**
-	 * Transform the body content from a POST request in JSON format to an JSONOBject
-	 * @param POST request
-	 * @return the JSONObject that defines the JSON object sent
-	 */
 	
 	public JSONObject getContentFromPost(HttpServletRequest request) {
 		
@@ -758,10 +742,7 @@ public class qreah {
 		
 	}
 	
-	/**
-	 * To get a post message with utf8 format
-	 * @throws IOException 
-	 */
+	
 	
 	/*
 	 *  Important: you have to use the method before any request.getParameter(whatever);
@@ -811,11 +792,6 @@ public class qreah {
 		return out;
 	}
 	
-	/**
-	 * Gets a text and gets the first word
-	 * @param text where the word is held
-	 * @return
-	 */
 	
 	
 	public String extractFirstWord(String text) {
@@ -873,8 +849,9 @@ public static void main (String [ ] args) throws MessagingException, ParseExcept
 	*/
 	
 	qreah q = new qreah();
+	System.out.print(q.today());
 	String text = "INSERT INTO apiadbossDB.DBRegisteredPosts VALUES ('1241414133330960384', 'Twitter', 'RT @Nopanaden: 👉🏻 5000 'camas para pacientes #COVID19";
-	
+	q.enviarMail("rafa@adboss.io", "hola", "hola");
 	
 	
 }
