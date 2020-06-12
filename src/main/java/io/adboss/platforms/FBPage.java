@@ -73,6 +73,10 @@ public class FBPage {
 		ATPage = getATPage();		
 	}
 	
+	public Facebook getFacebookObject() {
+		return facebook;
+	}
+	
 	/**
 	 * This constructor is used so you don't have to make an API call
 	 * to Facebook. That way you won't consume unnecesary calls

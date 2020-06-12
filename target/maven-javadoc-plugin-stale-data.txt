@@ -20,13 +20,13 @@
 -docencoding
 'UTF-8'
 -doctitle
-'utils-adboss 0.0.9 API'
+'utils-adboss 0.0.11 API'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' '/home/rafa/eclipse-workspace/utils-adboss/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'utils-adboss 0.0.9 API'
+'utils-adboss 0.0.11 API'
 io.adboss.dataconnection
 io.adboss.platforms
 io.adboss.testing
@@ -65,16 +65,16 @@ io.adboss.utils
 /home/rafa/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar = 1587289460000
 /home/rafa/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar = 1587289460000
 /home/rafa/eclipse-workspace/utils-adboss/src/main/java = 1587232541000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-tree.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/index.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/package-list = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/index-all.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/allclasses-frame.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/help-doc.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/constant-values.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/stylesheet.css = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/allclasses-noframe.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/script.js = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/deprecated-list.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-summary.html = 1587811097000
-/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-frame.html = 1587811097000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-tree.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/index.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/package-list = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/index-all.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/allclasses-frame.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/help-doc.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/constant-values.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/stylesheet.css = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/allclasses-noframe.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/script.js = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/deprecated-list.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-summary.html = 1587843543000
+/home/rafa/eclipse-workspace/utils-adboss/target/apidocs/overview-frame.html = 1587843543000

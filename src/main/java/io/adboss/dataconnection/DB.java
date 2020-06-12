@@ -37,11 +37,12 @@ public class DB {
 		private String locationTable = "apiadbossDB.locations";
 		private static final Logger log = Logger.getLogger(DB.class.getName());
 		String dataBase = "apiadbossDB";
-		String instanceConnectionName = "devadboss-181207:europe-west1:apiadboss";
+		String instanceConnectionName = "";
 		String roorPass = "rootadboss2018";
 		
-		public void DB() throws ClassNotFoundException, ServletException, IOException, SQLException {
-			conn = ConnectDB();
+		public DB() throws ClassNotFoundException, ServletException, IOException, SQLException {
+			//conn = ConnectDB();
+			//instanceConnectionName = getInstanceConnectionName();
 		}
 		
 		
@@ -90,7 +91,7 @@ public class DB {
 		    	
 				//if (url == null)
 				//	url = "jdbc:mysql://google/MB?cloudSqlInstance=marketboss-201812:europe-west1:marketboss&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=QuiqueRafa&useSSL=false";
-				log.info(url);
+				
 		    	Class.forName("com.mysql.cj.jdbc.Driver");
 		    	
 		    	conn = DriverManager.getConnection(url); 
@@ -102,6 +103,14 @@ public class DB {
 
 			
 			}
+		
+		public String getInstanceConnectionName() throws IOException {
+			Properties properties = new Properties();
+			properties.load(getClass()	
+					.getClassLoader()
+					.getResourceAsStream("names.sec"));
+			return properties.getProperty("database");
+		}
 
 		   
 		/*
@@ -796,7 +805,10 @@ public class DB {
 			conn.close();
 		}
 		
-		
+		public static void main(String[] args) throws Exception {
+			DB db = new DB();
+			log.info(db.getInstanceConnectionName());
+		}
 			
 		
 	}

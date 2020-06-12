@@ -759,7 +759,6 @@ public class qreah {
 	    while ((line = reader.readLine()) != null) {
 	        buffer.append(line);
 	    }
-	    log.info(buffer.toString());
 	    return buffer.toString();
 	}
 	

@@ -43,7 +43,12 @@ public class GMB {
 	private static MyBusiness mybusiness;
 	
 	public GMB() throws ClassNotFoundException, SQLException, ServletException, IOException {
-		mybusiness = APIaccess.connectGMB();
+		mybusiness = APIaccess.connectGMBOld();
+		
+	}
+	
+	public MyBusiness getMyBusiness() {
+		return mybusiness;
 	}
 	
 	/**
@@ -51,7 +56,7 @@ public class GMB {
 	 * @return List A list of accounts.
 	 * @throws Exception
 	 */
-	public static List<Account> listAccounts() throws Exception {
+	public List<Account> listAccounts() throws Exception {
 		
 		MyBusiness.Accounts.List accountsList = mybusiness.accounts().list();
 		ListAccountsResponse response = accountsList.execute();
