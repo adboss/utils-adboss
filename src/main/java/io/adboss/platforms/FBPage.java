@@ -141,7 +141,7 @@ public class FBPage {
 	
 	// Category update uses 'category_list (e.g.: category_list=['2500']) instead that
 	// category_enum
-	public boolean updateCategory(String list) throws FacebookException, JSONException {
+	public boolean updateCategory(String list) throws FacebookException, JSONException, IOException {
 		boolean updated = false;
 		Map<String, String> params = new HashMap<String, String>();
 		params = new HashMap<String, String>();
@@ -297,7 +297,7 @@ public class FBPage {
 		this.location = fbPage;
 	}
 	
-	public boolean updateLocation(Facebook facebook, String idPage, String location) throws FacebookException, JSONException {
+	public boolean updateLocation(Facebook facebook, String idPage, String location) throws FacebookException, JSONException, IOException {
 		boolean updated = false;
 		Map<String, String> params = new HashMap<String, String>();
 		params = new HashMap<String, String>();
@@ -503,7 +503,7 @@ public class FBPage {
 		return this;
 	}
 	
-	public boolean updateStoreCode() throws FacebookException, JSONException {
+	public boolean updateStoreCode() throws FacebookException, JSONException, IOException {
 		boolean updated = false;
 		Map<String, String> params = new HashMap<String, String>();
 		params = new HashMap<String, String>();
@@ -524,10 +524,11 @@ public class FBPage {
 	 * @param facebook: facebook object
 	 * @param ATF: access token for the user
 	 * @return Id Page
+	 * @throws IOException 
 	 */
 	
 	
-	public String createPage(Facebook facebook, String ATF) throws FacebookException, JSONException {
+	public String createPage(Facebook facebook, String ATF) throws FacebookException, JSONException, IOException {
 		String idPage = null;
 		
 		setStoreCode();

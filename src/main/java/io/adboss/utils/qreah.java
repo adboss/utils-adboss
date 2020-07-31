@@ -129,11 +129,15 @@ public class qreah {
 	 *   - None (an email is sent and can be seen in the development project account mailbox
 	 */
 	
-	public void enviarMail(String destinatario, String asunto, String cuerpo) {
+	public void enviarMail(String destinatario, String asunto, String cuerpo) throws IOException {
 	    
 	    //String remitente = "qhrear@gmail.com"; 
 	    String remitente = "operations@grinboss.com";
-	    String clave = "Fayo0173"; //Para la dirección nomcuenta@gmail.com
+	    Properties properties = new Properties();
+		properties.load(getClass()	
+				.getClassLoader()
+				.getResourceAsStream("names.sec"));
+	    String clave = properties.getProperty("emailKeyOperations");
 
 	    Properties props = System.getProperties();
 	    	    
@@ -815,7 +819,7 @@ public class qreah {
 	
 	
 	
-public static void main (String [ ] args) throws MessagingException, ParseException, UnsupportedEncodingException {
+public static void main (String [ ] args) throws MessagingException, ParseException, IOException {
 	/*
 	qreah q = new qreah();
 	List<String> days = q.get30LastDays();
