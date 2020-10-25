@@ -82,6 +82,8 @@ public class qreah {
 		
 	}
 	
+	
+	
 	public String HTTP(String url) throws IOException {
 		HttpRequestFactory requestFactory 
         = HTTP_TRANSPORT.createRequestFactory(
@@ -817,6 +819,16 @@ public class qreah {
 		return out;
 	}
 	
+	public int getDayNumber() throws ParseException {
+		String sDate="15/09/2020";  
+	    //Date date = new SimpleDateFormat("dd/MM/yyyy").parse(sDate);  
+	    Calendar cal = Calendar.getInstance();
+	    
+        Date date = cal.getTime();
+	    cal.setTime(date);
+	    return cal.get(Calendar.DAY_OF_WEEK);
+	}
+	
 	
 	
 public static void main (String [ ] args) throws MessagingException, ParseException, IOException {
@@ -850,11 +862,6 @@ public static void main (String [ ] args) throws MessagingException, ParseExcept
 	String date = "2020-03-15";
 	log.info("is: " + q.isGreater(date, dateRef));
 	*/
-	
-	qreah q = new qreah();
-	System.out.print(q.today());
-	String text = "INSERT INTO apiadbossDB.DBRegisteredPosts VALUES ('1241414133330960384', 'Twitter', 'RT @Nopanaden: 👉🏻 5000 'camas para pacientes #COVID19";
-	q.enviarMail("rafa@adboss.io", "hola", "hola");
 	
 	
 }

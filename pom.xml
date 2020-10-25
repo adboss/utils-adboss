@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.adboss</groupId>
   <artifactId>utils-adboss</artifactId>
-  <version>0.0.13</version>
+  <version>0.0.20</version>
   <name>utils-adboss</name>
   
   <description>A application used as an example on how to set up pushing 
@@ -41,43 +41,15 @@
 		    <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>  
 		  </properties>
   
-    <!-- Google My Business API is not located in a Remote Repository, you just have the jar files. 
-  	   So you have to create a Local Repository. The local repository we are using is called 'local-gmb-repo'
-  	   The original files are in ${project.basedir}/src/main/lib and the local repository is located in
-  	   ${project.basedir}/local-gmb-repo (GMB/local-gmb-repo). 
-  	   Once you have created the local repository, later in the pom.xml you will find the 
-  	   dependency (GroupId: gmb; ArtifactId: gmb-api)
-  	   In order to create the jar files in the local repository you have to get the original jar files from
-  	   Google My Business and put them in the repository with this instruction from Maven at the terminal:
-  	   	mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file  
-  	   		-Dfile=C:\Users\rafae\eclipse-workspace\GMB\src\main\lib\google-api-services-mybusiness-v4-revsnapshot-1.23.0.jar 
-  	   		-DgroupId=gmb 
-  	   		-DartifactId=gmb-api 
-  	   		-Dversion=1.0 
-  	   		-Dpackaging=jar 
-  	   		-DlocalRepositoryPath=local-gmb-repo/
-  	   You don't have to execute this instruction, you just have to assure the local repository is intact
-  -->
-  
-   <repositories>
-    <repository>
-        <id>local-gmb-repo</id>
-        <url>file:///${project.basedir}/local-gmb-repo</url>
-    </repository>
     
-  </repositories>
+  
+   
+    
+
   
   <dependencies>
   
-  <!-- This is the dependency from the Local Repository (local-gmb-repo) that is defined above
-  		 The GroupId is 'gmb' and the ArtifactId is 'gmb-api'
-  	-->
-  	<dependency>
-        <groupId>gmb</groupId>
-        <artifactId>gmb-api</artifactId>
-        <version>1.2</version>
-	</dependency>
-	
+  	
 	
   
   	<dependency>
@@ -169,6 +141,26 @@
         <artifactId>mail</artifactId>
         <version>1.4</version>
     </dependency>
+    
+     <dependency>
+	    <groupId>com.zaxxer</groupId>
+	    <artifactId>HikariCP</artifactId>
+	    <version>3.4.5</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.google.code.findbugs</groupId>
+	    <artifactId>annotations</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.google.code.findbugs</groupId>
+	    <artifactId>jsr305</artifactId>
+	    <version>3.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
     
     
     
